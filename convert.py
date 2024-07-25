@@ -10,3 +10,10 @@ def to_decimal(number, prec: int=2) -> Optional[Decimal]:
         return Decimal(number)
     else:
         return
+
+def to_int(number) -> Optional[int]:
+    flag, number = _check_is_numeric(number)
+    if flag:
+        return int(number)
+    else:
+        return
