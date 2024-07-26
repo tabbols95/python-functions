@@ -7,8 +7,8 @@ def to_decimal(number, prec: int=2) -> Optional[Decimal]:
 
     if isinstance(number, Decimal) or number is None:
         return number
-    flag, number = _check_is_numeric(number)
-    if flag:
+    verification_flag, number = _check_is_numeric(number)
+    if verification_flag:
         return Decimal(number)
     else:
         return
@@ -19,8 +19,8 @@ def to_real(number, prec: int=2) -> Optional[Decimal]:
 def to_float(number) -> Optional[float]:
     if isinstance(number, float) or number is None:
         return number
-    flag, number = _check_is_numeric(number)
-    if flag:
+    verification_flag, number = _check_is_numeric(number)
+    if verification_flag:
         return float(number)
     else:
         return
@@ -28,8 +28,8 @@ def to_float(number) -> Optional[float]:
 def to_int(number) -> Optional[int]:
     if isinstance(number, int) or number is None:
         return number
-    flag, number = _check_is_numeric(number)
-    if flag:
+    verification_flag, number = _check_is_numeric(number)
+    if verification_flag:
         return int(number)
     else:
         return
